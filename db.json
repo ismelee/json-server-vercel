@@ -1,11 +1,861 @@
-{"users": [
-    
-  ],
-  "posts": [
-    { "id": 1, "title": "json-server22", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+{
+    "users": [
+        {
+            "email": "jason@gmail.com",
+            "password": "$2a$10$m0zECpT2A2W9zYRtyVRqZebJRdexdgJb6QpRwtqew53ta7N0GB5XK",
+            "nickName": "jason",
+            "id": 1
+        },
+        {
+            "email": "ismelee@gmail.com",
+            "password": "$2a$10$yz2BqVJ7Q3MK8NYawvqOK.fuVr9SkdO2NcdpuBSKAuCig6yBD.CW2",
+            "nickName": "ismelee",
+            "id": 2
+        },
+        {
+            "email": "q@gmail.com",
+            "password": "$2a$10$Cx.c9JCzT5AmejfbqWzvpeQERjBnbsdypVMOd6pBUvrAjB79kzKU.",
+            "nickName": "小明",
+            "id": 3
+        },
+        {
+            "email": "dog@gmail.com",
+            "password": "$2a$10$QwsqxkT3XEZidFkl1DFO/ewdEeyNjhcjs5DtC2s0u7HUh0aqVQf0K",
+            "nickName": "阿狗",
+            "id": 4
+        }
+    ],
+    "likes": [
+        {
+            "userId": "1",
+            "productId": "2",
+            "id": 12
+        },
+        {
+            "userId": "1",
+            "productId": "18",
+            "id": 13
+        },
+        {
+            "userId": "2",
+            "productId": "8",
+            "id": 14
+        },
+        {
+            "userId": "2",
+            "productId": "35",
+            "id": 15
+        },
+        {
+            "userId": "3",
+            "productId": "30",
+            "id": 16
+        },
+        {
+            "userId": "3",
+            "productId": "18",
+            "id": 17
+        },
+        {
+            "userId": "4",
+            "productId": "23",
+            "id": 18
+        },
+        {
+            "userId": "4",
+            "productId": "33",
+            "id": 19
+        },
+        {
+            "userId": "4",
+            "productId": "10",
+            "id": 20
+        },
+        {
+            "userId": "1",
+            "productId": "31",
+            "id": 21
+        },
+        {
+            "userId": "1",
+            "productId": "35",
+            "id": 23
+        },
+        {
+            "userId": "3",
+            "productId": "20",
+            "id": 24
+        }
+    ],
+    "carts": [
+        {
+            "userId": "1",
+            "productId": "1",
+            "id": 12
+        },
+        {
+            "userId": "2",
+            "productId": "1",
+            "id": 13
+        },
+        {
+            "userId": "2",
+            "productId": "40",
+            "id": 14
+        },
+        {
+            "userId": "1",
+            "productId": "18",
+            "id": 15
+        },
+        {
+            "userId": "2",
+            "productId": "23",
+            "id": 16
+        },
+        {
+            "userId": "3",
+            "productId": "30",
+            "id": 17
+        },
+        {
+            "userId": "3",
+            "productId": "18",
+            "id": 18
+        },
+        {
+            "userId": "4",
+            "productId": "23",
+            "id": 19
+        },
+        {
+            "userId": "4",
+            "productId": "33",
+            "id": 20
+        },
+        {
+            "userId": "4",
+            "productId": "14",
+            "id": 21
+        },
+        {
+            "userId": "1",
+            "productId": "32",
+            "id": 22
+        },
+        {
+            "userId": "1",
+            "productId": "17",
+            "id": 23
+        }
+    ],
+    "options": [
+        {
+            "userId": "1",
+            "option": "我覺得很好穿，非常實用",
+            "id": 1
+        },
+        {
+            "userId": "1",
+            "option": "很棒，繼續努力，希望可以進步!!!",
+            "id": 2
+        },
+        {
+            "userId": "1",
+            "option": "不錯，我非常喜歡你們的鞋子",
+            "id": 3
+        },
+        {
+            "userId": "3",
+            "option": "太棒了!!!!!!!!!!!!!!!!!",
+            "id": 4
+        }
+    ],
+    "orders": [
+        {
+            "userId": "1",
+            "order": "[object Object],[object Object]",
+            "id": 1
+        },
+        {
+            "userId": "1",
+            "order": "[object Object],[object Object]",
+            "id": 2
+        },
+        {
+            "userId": "1",
+            "order": "[object Object]",
+            "id": 3
+        },
+        {
+            "userId": "1",
+            "order": "[object Object]",
+            "id": 4
+        },
+        {
+            "userId": "1",
+            "order": "[object Object]",
+            "id": 5
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Nike Air Force 1",
+            "size": "28.5cm",
+            "brand": "nike",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/NikeAirForce.jpg",
+            "imgSrc2": "shoes-list/NikeAirForce-2.jpg",
+            "imgSrc3": "shoes-list/NikeAirForce-3.jpg",
+            "originalPrice": "4000",
+            "price": "3500",
+            "describe": "這雙從球場得分利器晉升成街頭潮王的鞋款，即將慶祝萬眾矚目的 40 週年。 Nike Air Force 1 低筒鞋以近乎原汁原味的風貌復刻回歸，延續你我熟悉的卓越設計：車縫裝飾片、俐落皮革及恰到好處的籃球風格。喜歡拍照、出遊，以及想展現青春活力的人們適用，如果是在煩惱該如何穿搭的人們，這雙鞋絕對是首選，百搭任何穿衣風格，是保證不出錯的鞋款。",
+            "notice": "此鞋款版型偏大，建議依照自身尺寸小半號來去做選擇，較容易包覆好行走。"
+        },
+        {
+            "id": 2,
+            "name": "Converse 1970",
+            "size": "28cm",
+            "brand": "converse",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/Converse1970.jpg",
+            "imgSrc2": "shoes-list/Converse1970-2.jpg",
+            "imgSrc3": "shoes-list/Converse1970-3.jpg",
+            "originalPrice": "2480",
+            "price": "2050",
+            "describe": "Converse 1970底部較厚，包覆性全面升級，在穿著時可以更舒適的走動，此外由於鞋底包邊較高，1970的鞋頭看起來更窄更尖，視覺上讓腿得到更多延伸，上腳整體比例更瘦長，而鞋帶採用扁形柔軟的方式製作，可以更好的調整鞋子大小的比例，讓您更活躍，配合上身與下身的穿搭，可以展現更年輕有活力的魅力，是穿搭首選!",
+            "notice": "此鞋款建議穿著厚襪子，行走時較為舒適。"
+        },
+        {
+            "id": 3,
+            "name": "NB 996",
+            "size": "27.5cm",
+            "brand": "newbalance",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/NB996.jpg",
+            "imgSrc2": "shoes-list/NB996-2.jpg",
+            "imgSrc3": "shoes-list/NB996-3.jpg",
+            "originalPrice": "3650",
+            "price": "3140",
+            "describe": "NB996持續揉合著進步的球鞋科技與美制工藝，增加 ENCAP wedge 與雙密度 C-CAP 中底提升支撐與緩沖性，碳橡膠組成的雙色外底與鞋面革新，搭配修長並較尖的楦頭顯然更利於搭配直筒、修身的褲款，因此讓該型號成為流行人士熱愛的主要因素，產地由美國與日本所製造，在品質方面更是滴水不漏，適合各年齡層的人適用。",
+            "notice": "此鞋款大部分由麂皮製作，因此需要注意多清潔。"
+        },
+        {
+            "id": 4,
+            "name": "Nike Air Jordan",
+            "size": "27.5cm",
+            "brand": "nike",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/NikeAirJordan.jpg",
+            "imgSrc2": "shoes-list/NikeAirJordan-2.jpg",
+            "imgSrc3": "shoes-list/NikeAirJordan-3.jpg",
+            "originalPrice": "5840",
+            "price": "4000",
+            "describe": "Nike Air Jordan以原版AJ1為靈感，讓球迷有機會追隨Michael Jordan的腳步。 新穎色彩搭配經典素淨材質，為傳統設計注入現代氣息，此外提供氣墊提供輕量緩震機能，搭配真皮與合成皮革鞋面，結構穩固又耐穿，以及厚實橡膠外底可於多種表面上提供卓越抓地力，穿上去立馬成為眾所矚目的焦點，成為時尚達人。",
+            "notice": "此鞋款盡量部要碰到水，一旦觸碰到請立即擦拭。"
+        },
+        {
+            "id": 5,
+            "name": "NB XC72",
+            "size": "26.5cm",
+            "brand": "newbalance",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/NBXC72.jpg",
+            "imgSrc2": "shoes-list/NBXC72-2.jpg",
+            "imgSrc3": "shoes-list/NBXC72-3.jpg",
+            "originalPrice": "3800",
+            "price": "3200",
+            "describe": "XC-72將其經典靈感來源進一步推向了未開發的領域，其時間彎曲的設計靈感來自70年代概念車的投機技術樂觀主義，採用三種獨特的抓地力外底圖案和棱角分明的特徵，以低飽和色系做為基底，色彩配置大膽卻又不失和諧，加上重點濃郁色做拼接點綴，在穿著時展現優雅又不失活力的率性氛圍，為日常穿搭增添耀眼亮點！",
+            "notice": "穿搭上建一搭配單一色系服裝，看起來更有精神。"
+        },
+        {
+            "id": 6,
+            "name": "Converse 70 HI",
+            "size": "28cm",
+            "brand": "converse",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/Converse70HI.jpg",
+            "imgSrc2": "shoes-list/Converse70HI-2.jpg",
+            "imgSrc3": "shoes-list/Converse70HI-3.jpg",
+            "originalPrice": "2540",
+            "price": "1800",
+            "describe": "此鞋款採用高筒的方式設計，相較於以往的低筒多了更多修身的特性，穿搭上看起來更復古又不失優雅，在近年來更是成為年輕人必備的流行鞋款，搭配上高密度的鞋墊設計，鮮豔吸睛的色彩，不管是在出外郊遊或是朋友聚會，都可以稱霸全場，讓您的青春永遠停留在這一時刻!",
+            "notice": "此鞋款盡量不要在運動時使用，避免發生受傷。"
+        },
+        {
+            "id": 7,
+            "name": "Nike Air Pegasus",
+            "size": "25.5cm",
+            "brand": "nike",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/NikeAirPegasus.jpg",
+            "imgSrc2": "shoes-list/NikeAirPegasus-2.jpg",
+            "imgSrc3": "shoes-list/NikeAirPegasus-3.jpg",
+            "originalPrice": "3100",
+            "price": "2500",
+            "describe": "穿上這雙復古經典鞋款，盡享宛如頭等艙的尊榮騁馳體驗。Nike Air Pegasus在歷來搶眼的跑鞋款式中融合些許復古設計和非凡舒適感，絕對是你必備的全新單品。結合皮革、麂皮和布質鞋面，實穿百搭，不必搭飛機也能四處遨遊，只要穿上這雙運動鞋，就能煥新登場。",
+            "notice": "此鞋款可休閒可運動，但不可太激烈。"
+        },
+        {
+            "id": 8,
+            "name": "NB 237",
+            "size": "28.5cm",
+            "brand": "newbalance",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/NB237.jpg",
+            "imgSrc2": "shoes-list/NB237-2.jpg",
+            "imgSrc3": "shoes-list/NB237-3.jpg",
+            "originalPrice": "2680",
+            "price": "2100",
+            "describe": "此次NB 237推出新系列，以燕麥白為主調的調和出溫柔又具有線條感的鞋款，讓側邊剪裁縫製的大「N」字成為鞋身的亮點，添加視覺上的新穎感受，除了討喜的奶油色系，還以復古為靈感打造出寶寶藍與抹茶綠等討喜色彩，為了就是要讓人們在日常生活中可以隨意穿上，怎麼搭怎麼時尚，也即將成為國民鞋款。",
+            "notice": "此鞋款不適合登山健行等活動。"
+        },
+        {
+            "id": 9,
+            "name": "Converse Run Star",
+            "size": "29cm",
+            "brand": "converse",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/ConverseRunStar.jpg",
+            "imgSrc2": "shoes-list/ConverseRunStar-2.jpg",
+            "imgSrc3": "shoes-list/ConverseRunStar-3.jpg",
+            "originalPrice": "3580",
+            "price": "2500",
+            "describe": "此鞋款較以往不同的是，這次以鋸齒狀鞋底來去做設計，屬於低筒款型，最大的優點莫過於有增高的效果，不論是男生或女生，都非常推薦這款，同時也擁有瘦小腿的效果，拍照或者一般出遊都可以顯現更好的比例，也非常適合各年齡層的人穿著，可以更舒適、更輕便的行走，可以說是結合舒適與美觀。",
+            "notice": "此雙版型偏大，建議選擇小半號來去穿著。"
+        },
+        {
+            "id": 10,
+            "name": "Converse Utility",
+            "size": "29.5cm",
+            "brand": "converse",
+            "type": "休閒鞋款",
+            "imgSrc": "shoes-list/ConverseUtility.jpg",
+            "imgSrc2": "shoes-list/ConverseUtility-2.jpg",
+            "imgSrc3": "shoes-list/ConverseUtility-3.jpg",
+            "originalPrice": "3780",
+            "price": "2700",
+            "describe": "此鞋款主要以波浪形的橡膠當作中底，不會讓鞋子損壞，並且使用高架風格的半透明籠罩層，看起來架式十足，除此之外鞋帶使用圓弧型的設計，再綁繫時可以有更好的手感，也不會容易鬆脫，對於年輕族群來說，是非常搶手的鞋款，即使年紀已過了歲月，依然也可以重拾青春。",
+            "notice": "此雙版型偏大，建議選擇小半號來去穿著。"
+        },
+        {
+            "id": 11,
+            "name": "Puma X-Ray Speed",
+            "size": "27.5cm",
+            "brand": "puma",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/PumaXraySpeed.jpg",
+            "imgSrc2": "shoes-list/PumaXraySpeed-2.jpg",
+            "imgSrc3": "shoes-list/PumaXraySpeed-3.jpg",
+            "originalPrice": "2680",
+            "price": "2370",
+            "describe": "此鞋款屬於經典復古慢跑行系列鞋款，延續了70年代的街頭慢跑風格，採用立體刻痕中底，兼具了時尚外觀與舒適的緩衝腳感，此外也搭配了SoftFoam記憶鞋墊，提供出色的避震效果和最佳舒適度，讓您在運動時可以保護腳踝，同時給予出色的回饋效果，突破自我的紀錄，非常適合運動以及休閒穿搭。",
+            "notice": "此鞋款須注意顏色方面容易染色，可使用擦布擦拭。"
+        },
+        {
+            "id": 12,
+            "name": "Nike Lebron",
+            "size": "29cm",
+            "brand": "nike",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/NikeLebron.jpg",
+            "imgSrc2": "shoes-list/NikeLebron-2.jpg",
+            "imgSrc3": "shoes-list/NikeLebron-3.jpg",
+            "originalPrice": "3200",
+            "price": "2700",
+            "describe": "本鞋款的輕量支撐機能配置到位，一如球王的快狠準，讓你霸氣騁馳，跑跳自如。大型MaxAir氣墊提供縱橫球場所需的緩震機能，並彰顯LeBron的氣蓋山河。前足配置柔軟網布，使雙足常保涼爽舒適，鞋跟與中足周圍的強韌網布加上塑膠夾片，讓支撐力更上一層，搭配橡膠鞋底，可在切入和轉身時發揮耐久抓地效能，只要穿上這雙鞋，就注定是王者。",
+            "notice": "此鞋款盡量以合腳作為選配，方可最大效益。"
+        },
+        {
+            "id": 13,
+            "name": "Adidas Duramo",
+            "size": "27cm",
+            "brand": "adidas",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/AdidasDuramo.jpg",
+            "imgSrc2": "shoes-list/AdidasDuramo-2.jpg",
+            "imgSrc3": "shoes-list/AdidasDuramo-3.jpg",
+            "originalPrice": "2300",
+            "price": "1800",
+            "describe": "本鞋款適合進行多項運動，搭配輕量網布和柔軟避震，讓您在溫暖的天氣下，兼顧造型和舒適的腳感，其中最常以此鞋來當作長跑、短跑的使用，透過氣墊回傳的方式，帶給使用者深層的能量給予，不管上山還是室內運動，都可以輕鬆征服，適合所有年齡層的人，不分男女皆可適用。",
+            "notice": "此鞋款盡量以合腳作為選配，方可最大效益。"
+        },
+        {
+            "id": 14,
+            "name": "Nike Waffle",
+            "size": "29.5cm",
+            "brand": "nike",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/NikeWaffle.jpg",
+            "imgSrc2": "shoes-list/NikeWaffle-2.jpg",
+            "imgSrc3": "shoes-list/NikeWaffle-3.jpg",
+            "originalPrice": "2700",
+            "price": "2000",
+            "describe": "本鞋款讓復古鞋款時尚升級，這股風潮挾帶時尚改版的超柔軟楔型中底再度席捲而來，最重要的是，這次在鞋底延續了經典風格，採用歷久不敗的鬆餅格紋外底，為每一步伐增添抓地力、耐久性和經典指標性，以柔軟麂皮裝飾片，重現Nike藍帶體育公司曾使用過的材質，紋理襯底搭配表面俐落處理，更經久耐穿，適合各種運動。",
+            "notice": "此鞋款盡量以合腳作為選配，方可最大效益。"
+        },
+        {
+            "id": 15,
+            "name": "NB Fresh",
+            "size": "29.5cm",
+            "brand": "newbalance",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/NBFresh.jpg",
+            "imgSrc2": "shoes-list/NBFresh-2.jpg",
+            "imgSrc3": "shoes-list/NBFresh-3.jpg",
+            "originalPrice": "3600",
+            "price": "2900",
+            "describe": "本鞋款可謂運動鞋中的王者，在鞋底上使用FreshFoam的緩陣中底，在運動中可以在每一步踏下去的瞬間，給予適當的腳底回饋，不僅比前一代更亮眼舒適，同時保有柔軟支撐力和全日可靠度，依舊是值得你信賴的鞋款，鞋舌與鞋領的加厚襯墊，可提升舒適感；全鞋面機能網布，較一般網布更強韌、更有彈性，輕盈透氣。",
+            "notice": "此鞋款盡量穿著長厚襪，保護腳踝與腳底。"
+        },
+        {
+            "id": 16,
+            "name": "Adidas Ultraboost",
+            "size": "28cm",
+            "brand": "adidas",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/AdidasUltraboost.jpg",
+            "imgSrc2": "shoes-list/AdidasUltraboost-2.jpg",
+            "imgSrc3": "shoes-list/AdidasUltraboost-3.jpg",
+            "originalPrice": "6500",
+            "price": "5200",
+            "describe": "本鞋款採用新科技，將腳底顆粒化，做成微型能量膠囊，再將這些能儲存、能釋放的膠囊做成球鞋中底，使其在運動中，能互相擠壓、反彈，達到反覆儲能反覆釋放的目的，大大提高了能量回彈，這些細密的boost顆粒會帶來更多的能量，將運動員的力量展現出來，也支援防水，並且減輕衝擊負擔，對於高度運動的人們來說，是絕對要入手的鞋款。",
+            "notice": "此鞋款建議搭配長襪，運動時才更有保護。"
+        },
+        {
+            "id": 17,
+            "name": "Puma Enzo",
+            "size": "27.5cm",
+            "brand": "puma",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/PumaEnzo.jpg",
+            "imgSrc2": "shoes-list/PumaEnzo-2.jpg",
+            "imgSrc3": "shoes-list/PumaEnzo-3.jpg",
+            "originalPrice": "2200",
+            "price": "1750",
+            "describe": "本鞋款舒適穩固的推進腳感，締造疾速快感與清新活力，新版在中底置入前代ZoomFly所沒有的ZoomX泡棉，讓早已備受推崇的鞋款機能升級，青出於藍，此外緩震系統經升級後更輕盈靈敏，所有機能特色分進合擊，助你跑得更輕鬆、更快，並享受更多跑步樂趣，碳纖維鞋底墊片可在不同配速下實現推進感受和流暢轉換，讓你想不斷邁開下一步。",
+            "notice": "此鞋款務必穿戴襪子，並且可以隨意調整緊度。"
+        },
+        {
+            "id": 18,
+            "name": "Adidas Retropy",
+            "size": "28.5cm",
+            "brand": "adidas",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/AdidasRetropy.jpg",
+            "imgSrc2": "shoes-list/AdidasRetropy-2.jpg",
+            "imgSrc3": "shoes-list/AdidasRetropy-3.jpg",
+            "originalPrice": "3090",
+            "price": "2650",
+            "describe": "本鞋款穿上此競速鞋款，會讓速度再進化，自信挑戰全新目標和紀錄，而鞋面經重新設計，全面提升舒適度與透氣性，本鞋型保留前一代的靈敏緩震和穩固支撐機能，無論是10K或是馬拉松比賽，都能推進你發揮優異表現，此外採用全掌式碳纖維鞋底墊片，造就步步推進的靈敏腳感，締造出更柔軟涼爽且契合足形的設計。",
+            "notice": "此鞋款無防水，因此需要注意雨天使用。"
+        },
+        {
+            "id": 19,
+            "name": "Puma Nitro",
+            "size": "28cm",
+            "brand": "puma",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/PumaNitro.jpg",
+            "imgSrc2": "shoes-list/PumaNitro-2.jpg",
+            "imgSrc3": "shoes-list/PumaNitro-3.jpg",
+            "originalPrice": "3580",
+            "price": "3100",
+            "describe": "本鞋款讓你隨時準備好上路，參考了數百名跑者的測試結果，設計出鞋跟下方的抗震襯墊，使動能從足跟平穩流暢地轉移至足尖，同時根據深度分析打造通風鞋面，提供適切到位的透氣性，前足靈敏緩震，步步回傳能量，推進你一路向前，結合泡棉中底，締造平穩扎實的貼地腳感，可使動能更順暢從腳跟轉移至腳尖，讓腳跟過度外翻的跑者輕鬆不費力。",
+            "notice": "此鞋款務必穿戴襪子，避免運動傷害出現。"
+        },
+        {
+            "id": 20,
+            "name": "Puma Tr",
+            "size": "26.5cm",
+            "brand": "puma",
+            "type": "運動鞋款",
+            "imgSrc": "shoes-list/PumaTr.jpg",
+            "imgSrc2": "shoes-list/PumaTr-2.jpg",
+            "imgSrc3": "shoes-list/PumaTr-3.jpg",
+            "originalPrice": "3280",
+            "price": "2900",
+            "describe": "本鞋款為當今最流行的鞋款之一，最大的優勢在於重量非常輕，穿上去不只可以凸顯運動效果，重要的是可以保護腳踝，在遇到崎嶇不平的道路時，可以避免雙腳扭到，加上氣墊避震的效果，讓您運動時也可以兼具安全性，適合全家大小一起穿著。",
+            "notice": "此鞋款務必穿戴襪子，避免運動傷害出現。"
+        },
+        {
+            "id": 21,
+            "name": "Lanew 德比鞋",
+            "size": "27cm",
+            "brand": "lanew",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Lanew德比鞋.jpg",
+            "imgSrc2": "shoes-list/Lanew德比鞋-2.jpg",
+            "imgSrc3": "shoes-list/Lanew德比鞋-3.jpg",
+            "originalPrice": "5780",
+            "price": "4300",
+            "describe": "本鞋款鞋面使用高質感牛皮，舒適透氣、觸感佳，韌性高又耐曲折，讓您穿起來和運動鞋一樣，同時柔軟吸震，觸感舒適，可有效分擔行走時的壓力，具有專利防滑底紋設計搭配獨家防滑耐磨配方，強效控油、控水，油切、疏油、排水三效合一，雨天行走安心加倍，不會讓您感到彆扭，非常推薦。",
+            "notice": "此鞋款建議搭配黑襪，看起來不會輕浮不專業。"
+        },
+        {
+            "id": 22,
+            "name": "Lanew 防黴鞋",
+            "size": "28.5cm",
+            "brand": "lanew",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Lanew防黴鞋.jpg",
+            "imgSrc2": "shoes-list/Lanew防黴鞋-2.jpg",
+            "imgSrc3": "shoes-list/Lanew防黴鞋-3.jpg",
+            "originalPrice": "5100",
+            "price": "4700",
+            "describe": "本鞋款採用國際頂級防水皮革，舒適柔軟兼具抗水及透氣功能，讓您的雙腳避免細菌感染，降低香港腳的危機，此外全新升級高彈PU鞋墊，足部減壓更有感，具有高密度PU大底防滑耐磨、穩定性高，彈性加強，耐磨耐站更耐走，讓您上班一整天都不會感受到不舒服，就算久站也不會有任何疼痛。",
+            "notice": "此鞋款需定期保養，利用擦布清潔。"
+        },
+        {
+            "id": 23,
+            "name": "Vanger 牛津鞋",
+            "size": "27.5cm",
+            "brand": "vanger",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Vanger牛津鞋.jpg",
+            "imgSrc2": "shoes-list/Vanger牛津鞋-2.jpg",
+            "imgSrc3": "shoes-list/Vanger牛津鞋-3.jpg",
+            "originalPrice": "3680",
+            "price": "3120",
+            "describe": "本鞋款具有豐富的雕花點綴，兼具復古與創新時尚感，鞋舌鋪棉包邊，順貼腳型，久走腳背依然舒適，加厚後包泡棉設計舒適，舒適更防磨腳，此外擁有質感止滑前掌設計，耐磨好走，一旦穿上便化身成金牌特務般紳士魅力，適合上班、婚禮、出席活動等場合適用。",
+            "notice": "此鞋款須放在陰涼處，避免日曬變質。"
+        },
+        {
+            "id": 24,
+            "name": "Vanger 紳士鞋",
+            "size": "27cm",
+            "brand": "vanger",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Vanger紳士鞋.jpg",
+            "imgSrc2": "shoes-list/Vanger紳士鞋-2.jpg",
+            "imgSrc3": "shoes-list/Vanger紳士鞋-3.jpg",
+            "originalPrice": "4080",
+            "price": "3500",
+            "describe": "本鞋款相較於其他鞋款，質感提升，雕花沖孔設計、裁面細緻鋸齒邊營造華麗感，並且加厚豬皮墊腳，穿著更舒適不疲累，透氣度也更佳，色彩採用褐色系，完美詮釋英法的高貴奢華，讓您不單單只是眾人的矚目，更是突顯皇家的氣息，不僅可以久站，更可以小慢跑，算是全方位的百搭皮鞋。",
+            "notice": "此鞋款須放在陰涼處，避免日曬變質。"
+        },
+        {
+            "id": 25,
+            "name": "Lanew 樂福鞋",
+            "size": "28.5cm",
+            "brand": "lanew",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Lanew樂福鞋.jpg",
+            "imgSrc2": "shoes-list/Lanew樂福鞋-2.jpg",
+            "imgSrc3": "shoes-list/Lanew樂福鞋-3.jpg",
+            "originalPrice": "4380",
+            "price": "3650",
+            "describe": "本鞋款使用上等精選優質牛皮，舒適又透氣，此外也使用乳膠鞋墊柔軟，觸感舒適，可有效分擔行走時的壓力，吸震舒適，鞋面使用高質感牛皮，舒適透氣、觸感佳，韌性高又耐曲折，而大底採用防滑耐磨的橡膠材質，大幅提升行走穩定度，讓您在下雨天行走也不會突然滑倒，大幅降低意外機率。",
+            "notice": "此鞋款須放在陰涼處，並且需定期保養。"
+        },
+        {
+            "id": 26,
+            "name": "Lanew 雕花鞋",
+            "size": "26.5cm",
+            "brand": "lanew",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Lanew雕花鞋.jpg",
+            "imgSrc2": "shoes-list/Lanew雕花鞋-2.jpg",
+            "imgSrc3": "shoes-list/Lanew雕花鞋-3.jpg",
+            "originalPrice": "4980",
+            "price": "4100",
+            "describe": "本鞋款採用精選優質牛皮 舒適又透氣，同時鞋內增高5.5公分，吸震材質鞋墊搭配特殊設計增高墊，輕鬆擁有長腿比例，讓您穿上的同時，擁有氣勢，展現震懾的台風，另外也具有天然皮料鞋墊，特性為吸濕性佳，搭配透氣材質，透氣舒適足感更好，可以防止香港腳的孳生。",
+            "notice": "此鞋款須放在陰涼處，避免日曬變質。"
+        },
+        {
+            "id": 27,
+            "name": "Vanger 橫紋鞋",
+            "size": "28cm",
+            "brand": "vanger",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Vanger橫紋鞋.jpg",
+            "imgSrc2": "shoes-list/Vanger橫紋鞋-2.jpg",
+            "imgSrc3": "shoes-list/Vanger橫紋鞋-3.jpg",
+            "originalPrice": "3680",
+            "price": "3050",
+            "describe": "本鞋款為簡約的牛津鞋款，鞋頭搭配經典橫紋雕花，在沉穩之中添加了輕快節奏，無論商務或休閒皆相宜，在厚底乳膠的抗震鞋墊有效吸收步行及久站時足部的不適，此外也具有獨門巧思厚質鞋舌給予雙足最舒適的包覆，讓您不管是業務、亦或是上班族，都可以輕鬆地讓腳有充分的休息。",
+            "notice": "此鞋款需要定期保養，以免腐壞失去耐性。"
+        },
+        {
+            "id": 28,
+            "name": "Lanew 氣墊鞋",
+            "size": "27cm",
+            "brand": "lanew",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Lanew氣墊鞋.jpg",
+            "imgSrc2": "shoes-list/Lanew氣墊鞋-2.jpg",
+            "imgSrc3": "shoes-list/Lanew氣墊鞋-3.jpg",
+            "originalPrice": "5180",
+            "price": "4400",
+            "describe": "本鞋款使用精密的防水工法，不管是在雨天還是任何情況，都可以避免雙腳的浸溼，降低香港腳的機率，此外內部使用了雙層氣墊，在行走時具有吸震減壓的效果，讓您有回饋感，同時具備超彈QLife鞋墊，不怕整天的站立，依然可以保持全方位的能量。",
+            "notice": "此鞋款須避免撞擊強烈的情況，預防掉漆。"
+        },
+        {
+            "id": 29,
+            "name": "Vanger 翼紋鞋",
+            "size": "29cm",
+            "brand": "vanger",
+            "type": "皮鞋鞋款",
+            "imgSrc": "shoes-list/Vanger翼紋鞋.jpg",
+            "imgSrc2": "shoes-list/Vanger翼紋鞋-2.jpg",
+            "imgSrc3": "shoes-list/Vanger翼紋鞋-3.jpg",
+            "originalPrice": "3980",
+            "price": "3450",
+            "describe": "本鞋款具有豐富的質感，圓尖頭鞋型，俐落修長好比例，穿起來就像古典紳士般優雅，重點在於優美翼紋雕花設計，讓您正式與休閒之間兩相宜，此外也具有柔軟全豬皮內裏，舒適不疲累，即使是整天的工作奔波，都可以維持非常好的體能，美觀又實用。",
+            "notice": "此鞋款須放在陰涼處，並且需定期保養。"
+        },
+        {
+            "id": 30,
+            "name": "Adidas Yeezy",
+            "size": "29.5cm",
+            "brand": "adidas",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/AdidasYeezy.jpg",
+            "imgSrc2": "shoes-list/AdidasYeezy-2.jpg",
+            "imgSrc3": "shoes-list/AdidasYeezy-3.jpg",
+            "originalPrice": "1500",
+            "price": "900",
+            "describe": "本鞋款因應夏季到來，憑藉其俐落簡約的外型與實穿度，吸引許多年輕人購買，其中採用一體成型EVA泡棉材質製成，減輕重量同時增加耐用性，鞋面的柔軟頂層提供穿著上舒適度，獨特鋸齒凹槽設計鞋底，提供絕佳回彈性和抓地力，讓許多運動員為了輕便舒適而選擇它。",
+            "notice": "此鞋款請勿泡水，容易造成扭曲，破壞品質。"
+        },
+        {
+            "id": 31,
+            "name": "Teva XLT2",
+            "size": "28cm",
+            "brand": "teva",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/TevaXLT2.jpg",
+            "imgSrc2": "shoes-list/TevaXLT2-2.jpg",
+            "imgSrc3": "shoes-list/TevaXLT2-3.jpg",
+            "originalPrice": "700",
+            "price": "450",
+            "describe": "本鞋款進行了全新的舒適升級，為它配上柔軟的鞋跟帶襯墊和一個全新的鞋底，具有比以往更好的牽引力，並且飾有Unifi再生聚酯鞋帶，適合日間遠足、輕遠足，也具有簡單的魔術貼開口，方便快速穿脫，而且貼合腳型，注塑成型的鞋帶末端，幫助快速輕鬆地抓握和調節，穩定並支撐您的雙腳。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 32,
+            "name": "Teva Verge",
+            "size": "27cm",
+            "brand": "teva",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/TevaVerge.jpg",
+            "imgSrc2": "shoes-list/TevaVerge-2.jpg",
+            "imgSrc3": "shoes-list/TevaVerge-3.jpg",
+            "originalPrice": "800",
+            "price": "550",
+            "describe": "本鞋款可調節腳踝帶讓你的雙腳可完美貼合，注塑成型的鞋帶末端，幫助快速輕鬆地抓握和調節，塑膠搭扣開口方便快速穿脫，並且尼龍鞋芯墊片在不平坦的地形上穩定並支撐您的雙腳，橡膠外底提供耐用性和牽引力，讓您就算穿著涼鞋也可以和運動鞋一樣靈敏舒適。",
+            "notice": "此鞋款須注意赤腳行走時，撞到尖銳的物品。"
+        },
+        {
+            "id": 33,
+            "name": "Teva Original",
+            "size": "26cm",
+            "brand": "teva",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/TevaOriginal.jpg",
+            "imgSrc2": "shoes-list/TevaOriginal-2.jpg",
+            "imgSrc3": "shoes-list/TevaOriginal-3.jpg",
+            "originalPrice": "500",
+            "price": "250",
+            "describe": "本鞋款適合全天穿著、節日穿著、外出穿著、水上活動，在任何出外遊玩都可以輕鬆穿著，也可以支撐您的雙腳並提供高耐用性，多點可調節性讓您獲得絕對完美的貼合度，而鞋履的部分，使用合成和植物基材料製成，環保又耐穿，cp值非常高。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 34,
+            "name": "Adidas Adilette",
+            "size": "29cm",
+            "brand": "adidas",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/AdidasAdilette.jpg",
+            "imgSrc2": "shoes-list/AdidasAdilette-2.jpg",
+            "imgSrc3": "shoes-list/AdidasAdilette-3.jpg",
+            "originalPrice": "800",
+            "price": "650",
+            "describe": "本鞋款採用植入性氣墊技術，讓您穿上時也能夠行動方便，此外下水也有足夠的防水性，馬上將接觸到的水揮發乾淨，讓您舒適又爽快，並且包覆性佳，不會隨意的掉鞋，讓您上班一整天後，可以用來舒緩雙腳的疲勞，達到按摩減壓的效果，非常推薦買來試穿。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 35,
+            "name": "Teva Zymic",
+            "size": "28.5cm",
+            "brand": "teva",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/TevaZymic.jpg",
+            "imgSrc2": "shoes-list/TevaZymic-2.jpg",
+            "imgSrc3": "shoes-list/TevaZymic-3.jpg",
+            "originalPrice": "800",
+            "price": "400",
+            "describe": "本鞋款進行了全新的舒適升級，為它配上柔軟的鞋跟帶襯墊和一個全新的鞋底，具有比以往更好的牽引力，並且飾有Unifi再生聚酯鞋帶，適合日間遠足、輕遠足，也具有簡單的魔術貼開口，方便快速穿脫，而且貼合腳型，注塑成型的鞋帶末端，幫助快速輕鬆地抓握和調節，穩定並支撐您的雙腳。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 36,
+            "name": "Teva Forebay",
+            "size": "27.5cm",
+            "brand": "teva",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/TevaForebay.jpg",
+            "imgSrc2": "shoes-list/TevaForebay-2.jpg",
+            "imgSrc3": "shoes-list/TevaForebay-3.jpg",
+            "originalPrice": "800",
+            "price": "670",
+            "describe": "本鞋款屬於多功能性的涼鞋採用精緻、堅固的皮革製成，經得起冒險精神，適合輕遠足、日間遠足，同時具有防水功能，防水速乾合成鞋面，適合各類型的冒險探索，也具有簡單的魔術貼開口，方便快速穿脫，而且貼合腳型，鞋墊部分可助您減低衝擊力，保護您的腳踝。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 37,
+            "name": "Teva Terra",
+            "size": "27.5cm",
+            "brand": "teva",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/TevaTerra.jpg",
+            "imgSrc2": "shoes-list/TevaTerra-2.jpg",
+            "imgSrc3": "shoes-list/TevaTerra-3.jpg",
+            "originalPrice": "900",
+            "price": "700",
+            "describe": "本鞋款適合長久的徒步旅行，使用聚酯紗線回收塑料製成，支撐您的雙腳並提供高耐磨性。這雙涼鞋可避免 5 個塑料瓶進入垃圾堆填區，乾淨又環保，並且模壓PU中底提供長時間的緩衝和支撐，TPU鞋芯墊片在不平坦的地形上穩定並支撐您的雙腳，具有高耐用性並提供出色的牽引力，穿上去絕對平步青雲。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 38,
+            "name": "Teva Revive",
+            "size": "26.5cm",
+            "brand": "teva",
+            "type": "拖鞋涼鞋鞋款",
+            "imgSrc": "shoes-list/TevaRevive.jpg",
+            "imgSrc2": "shoes-list/TevaRevive-2.jpg",
+            "imgSrc3": "shoes-list/TevaRevive-3.jpg",
+            "originalPrice": "560",
+            "price": "300",
+            "describe": "本鞋款進行了全新的舒適升級，為它配上柔軟的鞋跟帶襯墊和一個全新的鞋底，具有比以往更好的牽引力，並且飾有Unifi再生聚酯鞋帶，適合日間遠足、輕遠足，也具有簡單的魔術貼開口，方便快速穿脫，而且貼合腳型，注塑成型的鞋帶末端，幫助快速輕鬆地抓握和調節，穩定並支撐您的雙腳。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 39,
+            "name": "Merrell Moab",
+            "size": "28.5cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellMoab.jpg",
+            "imgSrc2": "shoes-list/MerrellMoab-2.jpg",
+            "imgSrc3": "shoes-list/MerrellMoab-3.jpg",
+            "originalPrice": "3980",
+            "price": "3500",
+            "describe": "本鞋款進行了全新的舒適升級，為它配上柔軟的鞋跟帶襯墊和一個全新的鞋底，具有比以往更好的牽引力，並且飾有Unifi再生聚酯鞋帶，適合日間遠足、輕遠足，也具有簡單的魔術貼開口，方便快速穿脫，而且貼合腳型，注塑成型的鞋帶末端，幫助快速輕鬆地抓握和調節，穩定並支撐您的雙腳。",
+            "notice": "此鞋款可以赤腳穿著，也可以穿配襪子。"
+        },
+        {
+            "id": 40,
+            "name": "Merrell Wrapt",
+            "size": "29cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellWrapt.jpg",
+            "imgSrc2": "shoes-list/MerrellWrapt-2.jpg",
+            "imgSrc3": "shoes-list/MerrellWrapt-3.jpg",
+            "originalPrice": "4280",
+            "price": "3700",
+            "describe": "本鞋款屬於真皮鞋面製成，真皮鞋面擁有Waterproof透氣防水，提供全天候的舒適。波紋棕褐色鞋底結構設計，有型耐磨耐穿，是個赤足訓練概念鞋款，前後足差0mm設計，發揮人體原有的力量，促進平時不使用的肌肉和身體平衡。提高訓練效果並促進身體回歸天然的狀態。建議在日常使用以及跑步和健身時使用赤足鞋。",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        },
+        {
+            "id": 41,
+            "name": "Merrell Sky",
+            "size": "29cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellSky.jpg",
+            "imgSrc2": "shoes-list/MerrellSky-2.jpg",
+            "imgSrc3": "shoes-list/MerrellSky-3.jpg",
+            "originalPrice": "4580",
+            "price": "4000",
+            "describe": "本鞋款具有彈性網布+TPU鞋面，穿著時更活躍，同時具有透氣網布內裡、快速扣設計，讓您的雙腳部受潮濕影響，穿脫也可以更方便，鞋墊採用可拆式EVA鞋墊，提供彈性支撐，提供穩定性和舒適性，不管是在爬山或是其他激烈運動，都可以伸縮自如。",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        },
+        {
+            "id": 42,
+            "name": "Merrell Atb",
+            "size": "29.5cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellAtb.jpg",
+            "imgSrc2": "shoes-list/MerrellAtb-2.jpg",
+            "imgSrc3": "shoes-list/MerrellAtb-3.jpg",
+            "originalPrice": "5980",
+            "price": "4500",
+            "describe": "本鞋款屬於多功能性鞋，為城市生活設計的戶外鞋，不管是在登山時具有足夠的保護力，在一般城市間更可以顯得潮流，並且支援防水功能，就算大雨來襲，您的雙腳依然保持乾燥，適應各種天氣，是當前登山愛客的首選，目前限量不多，要搶要快!",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        },
+        {
+            "id": 43,
+            "name": "Merrell Nova",
+            "size": "28.5cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellNova.jpg",
+            "imgSrc2": "shoes-list/MerrellNova-2.jpg",
+            "imgSrc3": "shoes-list/MerrellNova-3.jpg",
+            "originalPrice": "3880",
+            "price": "3300",
+            "describe": "本鞋款使用網布+麂皮+合成皮鞋面，高貴有質感，並且搭配透氣網布內裡與拆式EVA鞋墊，提供彈性支撐，環保又透氣，其中具有Air Cushion內嵌式避震墊片，幫助穩定足部，在高強度的登山行動中，絕對能夠安穩的保護腳部，提供穩定性與舒適性。",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        },
+        {
+            "id": 44,
+            "name": "Merrell Field",
+            "size": "27.5cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellField.jpg",
+            "imgSrc2": "shoes-list/MerrellField-2.jpg",
+            "imgSrc3": "shoes-list/MerrellField-3.jpg",
+            "originalPrice": "5680",
+            "price": "4200",
+            "describe": "本鞋款具有DRY襪套式防水結構100%防水透氣，幫助雙腳保持乾爽，以及防潑水麂皮+彈道網布鞋面，搭配舒適透氣網布內裡，優雅又舒適，其中配入風箱式鞋舌，防止碎石沙子進入，提供雙腳全方位的保護，使用耐用PU材質、延伸至腳後跟與雙腳兩側的中底結構，強化雙腳穩定度，同時提供緩震與舒適，可說是無懈可擊。",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        },
+        {
+            "id": 45,
+            "name": "Merrell Speed",
+            "size": "27.5cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellSpeed.jpg",
+            "imgSrc2": "shoes-list/MerrellSpeed-2.jpg",
+            "imgSrc3": "shoes-list/MerrellSpeed-3.jpg",
+            "originalPrice": "4980",
+            "price": "4200",
+            "describe": "本鞋款具有DRY襪套式防水結構100%防水透氣，幫助雙腳保持乾爽，以及防潑水麂皮+彈道網布鞋面，搭配舒適透氣網布內裡，優雅又舒適，其中配入風箱式鞋舌，防止碎石沙子進入，提供雙腳全方位的保護，也提供環境友善可拆式PU鞋墊以及Rock plate防護片，給予腳掌全方位保護。",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        },
+        {
+            "id": 46,
+            "name": "Merrell Sport",
+            "size": "28.5cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellSport.jpg",
+            "imgSrc2": "shoes-list/MerrellSport-2.jpg",
+            "imgSrc3": "shoes-list/MerrellSport-3.jpg",
+            "originalPrice": "3980",
+            "price": "3350",
+            "describe": "本鞋款使用GORE-TEX襪套式防水結構，防水透氣保持乾爽，搭配合成皮+網布鞋面，透氣滿分，也具有風箱式鞋舌，防止碎石沙子進入，以及Kinetic Fit Base可拆式EVA鞋墊，提供彈性支撐，幫助穩定足部，提供穩定性和舒適性，富有4mm刻紋搭配GRIP耐磨抓地系統-在任何需要活動地方，鞋底刻紋更具抓地力，安全有保障。",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        },
+        {
+            "id": 47,
+            "name": "Merrell Mtl",
+            "size": "27cm",
+            "brand": "merrell",
+            "type": "登山鞋款",
+            "imgSrc": "shoes-list/MerrellMtl.jpg",
+            "imgSrc2": "shoes-list/MerrellMtl-2.jpg",
+            "imgSrc3": "shoes-list/MerrellMtl-3.jpg",
+            "originalPrice": "3980",
+            "price": "3400",
+            "describe": "本鞋款使用透氣網布+TPU鞋面，搭配100%環境友善鞋帶+透氣網布內裡，避免雙腳潮濕，同時使用綁腿用D型環加上反光細節，能在光源不足的情況下，增加能見度，中底使用羽量級中底，減輕鞋身重量，反應更靈敏，讓您更活躍的移動，提高敏捷性。",
+            "notice": "此鞋款建議穿著厚襪子，避免受傷。"
+        }
+    ]
 }
