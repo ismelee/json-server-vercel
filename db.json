@@ -17,12 +17,6 @@
             "password": "$2a$10$Cx.c9JCzT5AmejfbqWzvpeQERjBnbsdypVMOd6pBUvrAjB79kzKU.",
             "nickName": "小明",
             "id": 3
-        },
-        {
-            "email": "dog@gmail.com",
-            "password": "$2a$10$QwsqxkT3XEZidFkl1DFO/ewdEeyNjhcjs5DtC2s0u7HUh0aqVQf0K",
-            "nickName": "阿狗",
-            "id": 4
         }
     ],
     "likes": [
